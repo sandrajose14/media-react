@@ -1,0 +1,52 @@
+
+
+Json
+---------------
+Json server is light weight and easy to use 'nodeJs' tool. that stimulate a restfull API using a JSON file has the data source.
+feutures
+----------------
+easy and quick create
+basically used for testing purpose.
+we can use git operation
+CRUD Operation can use
+Routing
+
+Steps to create Json servers
+------------------------------------
+1) create a folder for server
+2) create package.json file
+    npm init -y
+server is run in index.js
+3) install json server library
+  >npm  install json-server@0.17.4
+4) create .ignorefile
+give node_modules
+5) create JSON file
+to create json file to store json data
+here create a json file using any filename with extension .json.
+and i used to display here as array of objects.
+6) create index.js file(entry point to the server)
+its only the file thats runs in the backend bcoz it is the file that is mentioned
+it in the main key for package.json
+   1) -'import json-server library' but here its json and 
+    require is used for import the library
+   ----- const jsonServer = require('json-server')
+    2) create server using create function
+    using create() method
+   ----- const mediaPlayerServer =jsonServer.create()
+   3) create path for database.json file
+   using router() method
+   ------ const router =jsonServer.router('database.json')
+   4) create middleware to convert js into json
+   middleware which have the ability to control request response cycle
+   using default() method
+   ----- const middleware = jsonServer.defaults()
+   5)connect
+   to connect we use use()method
+   6)set up port for the server
+   ---------- const port=4000 || process.env.PORT
+   here we use process.env.PORT to avoid crashes. there are many default unique ports are there.
+   7)run the server
+
+content type - it is inside headers
+--application/json we are uploding through links not from system
